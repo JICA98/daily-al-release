@@ -1,12 +1,15 @@
 name: daily-al
 base: core18
-version: git
+version: '1.0'
 summary: UnOfficial MyAnimeList App
 description: UnOfficial MyAnimeList App
 confinement: strict
-base: core18
 grade: stable
 
 apps:
   daily-al:
     command: ./dailyanimelist
+
+parts:
+  daily-al:
+    source: .
