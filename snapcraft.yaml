@@ -6,17 +6,7 @@ description: UnOfficial MyAnimeList App
 confinement: strict
 base: core18
 grade: stable
-architectures:
-  - build-on: [ amd64 ]
-  - build-on: [ arm64 ]
 
 apps:
   daily-al:
-    command: dail-al
-    extensions: [flutter-stable]
-
-parts:
-  super-cool-app:
-    source: https://github.com/JICA98/DailyAnimeList
-    plugin: flutter
-    flutter-target: lib/main.dart # The main entry-point file of the application
+    command: ./dailyanimelist
