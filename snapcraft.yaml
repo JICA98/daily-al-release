@@ -9,7 +9,7 @@ grade: stable
 apps:
   daily-al:
     extensions: [gnome-3-38]
-    command: usr/bin/run
+    command: usr/bin/run/run.sh
 
 parts:
   daily-al:
@@ -26,9 +26,7 @@ parts:
       - libcairo2
       - libepoxy0
       - libgtk-3-0
-      - libgdk-pixbuf
       - libharfbuzz0b
-      - libjsoncpp
       - libpango-1.0-0
       - libpangocairo-1.0-0
       - libsecret-1-0
