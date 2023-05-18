@@ -1,16 +1,22 @@
 name: daily-al
 base: core18
-version: '1.0'
+version: git
 summary: UnOfficial MyAnimeList App
 description: UnOfficial MyAnimeList App
-grade: stable
 confinement: strict
+base: core18
+grade: stable
+architectures:
+  - build-on: [ amd64 ]
+  - build-on: [ arm64 ]
 
 apps:
-  hello:
-    command: bin/hello
+  daily-al:
+    command: dail-al
+    extensions: [flutter-stable]
 
 parts:
-  gnu-hello:
-    source: http://ftp.gnu.org/gnu/hello/hello-2.10.tar.gz
-    plugin: autotools
+  super-cool-app:
+    source: https://github.com/JICA98/DailyAnimeList
+    plugin: flutter
+    flutter-target: lib/main.dart # The main entry-point file of the application
