@@ -1,0 +1,38 @@
+name: daily-al
+base: core18
+version: '1.0'
+summary: UnOfficial MyAnimeList App
+description: |
+"Most beautiful MyAnimeList Client App." is here.
+
+Search through the huge MyAnimeList database and find your favorite anime and manga. Surf through the forums and find millions of discussions at your finger tips. Get detailed reviews and find tons of recommendations for all the anime and manga in MyAnimeList.
+
+⚡️ Anime & Manga ⚡️
+⭐ Seasonal Anime, Top Upcoming Anime, Most Popular Anime, Anime
+Ranking List, All time Favorites and more.
+⭐ Anime/Manga Synopsis. Related and Recommended content.
+⭐ Detailed Anime reviews and Anime/Manga Statistics.
+
+⚡️ Theming and Customization⚡️
+⭐ Choose from multiple dark themes, light themes and custom themes
+⭐ Customize your home page and set a background image for the app.
+
+⚡️ MyAnimeList Forums ⚡️
+⭐ Forums regarding MyAnimeList, Anime & Manga and even General
+Discussions.
+
+⚡️ Advanced Search Bar⚡️
+⭐ Make advanced searches directly from the search bar using "@"
+"#" with ease.
+⭐ Faster search loading times using caching mechanisms.
+grade: stable
+confinement: strict
+
+apps:
+  hello:
+    command: bin/hello
+    
+parts:
+  gnu-hello:
+    source: http://ftp.gnu.org/gnu/hello/hello-2.10.tar.gz
+    plugin: autotools
