@@ -1,5 +1,5 @@
 name: daily-al
-base: core18
+base: core20
 version: '1.0'
 summary: UnOfficial MyAnimeList App
 description: UnOfficial MyAnimeList App
@@ -8,8 +8,29 @@ grade: stable
 
 apps:
   daily-al:
-    command: ./dailyanimelist
+    extensions: [gnome-3-38]
+    command: usr/bin/run
 
 parts:
   daily-al:
+    plugin: dump
     source: .
+    organize:
+      run.sh: usr/bin/run
+      dailanimelist: usr/bin/run
+      data: usr/bin/run
+      lib: usr/bin/run
+    stage-packages:
+      - libatk1.0-0
+      - libcairo-gobject2
+      - libcairo2
+      - libepoxy0
+      - libgtk-3-0
+      - libgdk-pixbuf
+      - libharfbuzz0b
+      - libjsoncpp
+      - libpango-1.0-0
+      - libpangocairo-1.0-0
+      - libsecret-1-0
+
+

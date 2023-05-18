@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=DailyAL
+Icon=${SNAP}/meta/gui/icon.png
+Exec=daily-al
+Terminal=false
+Categories=Utility;
